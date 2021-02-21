@@ -7,7 +7,7 @@ LETI 2020/21 | Segurança Informática em Redes e Sistemas
 ## Objectivo
 
 O objectivo do trabalho consiste em aprender a utilizar o protocolo SSH
-usando o pacote OpenSSH. Vai ser usado o emulador de redes Netkit.
+usando o pacote OpenSSH. Vai ser usado o emulador de redes Kathara.
 
 Os protocolos SSH servem para fazer login remoto, copiar ficheiros e
 executar comandos remotamente de modo seguro. Os mecanismos usados são
@@ -135,7 +135,7 @@ onde *destination* é a pasta de destino.
 
 ## Exercício 3 -- Operações avançadas
 
-Para estes exercícios não vamos usar o netkit, mas os servidores
+Para estes exercícios não vamos usar o kathara, mas os servidores
 sigma.tecnico.ulisboa.pt. Deverá executar os comandos num terminal no
 seu PC. Cada exercício é um exercício separado.
 
@@ -187,12 +187,12 @@ Faça "man rsync" e veja o significado das várias flags utilizadas.
 
 Referências
 
--   Netkit, [http://wiki.netkit.org/][3]
+-   Kathara, [https://github.com/KatharaFramework/Kathara/wiki][3]
 
 -   Secure Shell, [http://en.wikipedia.org/wiki/Secure_Shell][4]
 
 -   ssh-keygen manual, [http://linux.die.net/man/1/ssh-keygen][5]
 
-  [3]: http://wiki.netkit.org/
+  [3]: https://github.com/KatharaFramework/Kathara/wiki
   [4]: http://en.wikipedia.org/wiki/Secure_Shell
   [5]: http://linux.die.net/man/1/ssh-keygen
