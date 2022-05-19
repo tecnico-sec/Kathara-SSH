@@ -50,7 +50,7 @@ Veja o conteúdo da pasta e repare que há dois ficheiros: um com a chave privad
 7. As chaves privadas não devem estar visíveis para outros utilizadores, caso contrário o SSH recusa-se a usá-las (e por isso pede a *password*).
 Confirme as permissões da pasta `.ssh` e do ficheiro `id_rsa` e repare que as permissões são  
 `rwx --- ---` (permissão de leitura, escrita e execução para o utilizador e nenhuma para o grupo e todos os utilizadores) ou  
-`rw\-\-\-\-\-\--` (só leitura e escrita).
+`rw- --- ---` (só leitura e escrita).
 
 8. Copie as chaves públicas (nunca as privadas!) de um computador para o outro.
 Pode fazer essa cópia copiando os ficheiros entre as máquinas usando o *secure copy* (ver exercício 2.2).
@@ -72,6 +72,8 @@ Se foi feita a troca de chaves e mesmo assim foi pedida a *password* é porque e
 12. Execute o comando `ssh` novamente mas dando a opção `-v`.
 Observe a informação mostrada.
 Note que essa informação pode ser útil para fazer *debug.*
+
+13. No ponto 6. acima dissemos para não indicar uma *password* que seria usada para proteger o ficheiro que contém a chave privada. No entanto, fornecer essa *password* é uma boa prática para evitar que um intruso roube esta chave. Em concreto, a partir dessa *password*, o comando gera uma chave secreta (simétrica) que usa para cifrar o conteúdo do ficheiro. Repita o passo 6. mas desta ver fornecendo essa chave. Volte a inspecionar o ficheiro onde está a chave privada. O que é que mudou? De agora em diante, quando pretender usar esse ficheiro vai ter de fornecer essa *password*.
 
 ---
 
