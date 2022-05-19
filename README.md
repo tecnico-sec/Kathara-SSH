@@ -53,13 +53,13 @@ Confirme as permissões da pasta `.ssh` e do ficheiro `id_rsa` e repare que as p
 `rw- --- ---` (só leitura e escrita).
 
 8. Copie as chaves públicas (nunca as privadas!) de um computador para o outro.
-Pode fazer essa cópia copiando os ficheiros entre as máquinas usando o *secure copy* (ver exercício 2.2).
-Uma alternativa mais prática é fazer *copy-paste* do conteúdo do ficheiro entre as duas janelas.
+Poderia fazer essa cópia copiando os ficheiros entre as máquinas usando o *secure copy* (ver exercício 2.2).
+Como ainda não vimos esse comando, uma alternativa prática é fazer *copy-paste* do conteúdo do ficheiro entre as duas janelas.
 
 9. No PC2 crie a pasta `.ssh`, com as permissões `700`.
 Pode alterar as permissões dando o comando:  
 `chmod 700 /<caminho para ficheiro ou pasta>`  
-Na pasta `.ssh` do utilizador para cuja conta quer fazer SSH sem ter de fornecer a *password*, crie um ficheiro chamado `authorized_keys` com a chave pública do utilizador remoto (podia lá colocar mais chaves de outros utilizadores, uma por linha, se fosse o caso).
+Na pasta `.ssh` do utilizador para cuja conta quer fazer SSH sem ter de fornecer a *password*, crie um ficheiro chamado `authorized_keys` com a chave pública do utilizador remoto. Podia lá colocar mais chaves de outros utilizadores, uma por linha, se fosse o caso.
 O objetivo deste ficheiro consiste em indicar as entidades que estão autorizadas a entrar, ou  seja, indica que o computador deve aceitar comandos SSH de utilizadores que tenham acesso a uma chave privada correspondendo a uma das chaves públicas presentes no ficheiro `authorized_keys`.
 
 10. Aceda da conta que tem a chave privada à outra correndo o comando:  
@@ -73,7 +73,7 @@ Se foi feita a troca de chaves e mesmo assim foi pedida a *password* é porque e
 Observe a informação mostrada.
 Note que essa informação pode ser útil para fazer *debug.*
 
-13. No ponto 6. acima dissemos para não indicar uma *password* que seria usada para proteger o ficheiro que contém a chave privada. No entanto, fornecer essa *password* é uma boa prática para evitar que um intruso roube esta chave. Em concreto, a partir dessa *password*, o comando gera uma chave secreta (simétrica) que usa para cifrar o conteúdo do ficheiro. Repita o passo 6. mas desta ver fornecendo essa chave. Volte a inspecionar o ficheiro onde está a chave privada. O que é que mudou? De agora em diante, quando pretender usar esse ficheiro vai ter de fornecer essa *password*.
+13. No ponto 6 acima dissemos para não indicar uma *password* que seria usada para proteger o ficheiro que contém a chave privada. No entanto, fornecer essa *password* é uma boa prática (essencial mesmo!) para evitar que um intruso roube esta chave. Em concreto, a partir dessa *password*, o comando gera uma chave secreta (simétrica) que usa para cifrar o conteúdo do ficheiro. Repita o passo 6. mas desta ver fornecendo essa chave. Volte a inspecionar o ficheiro onde está a chave privada. O que é que mudou? De agora em diante, quando pretender usar esse ficheiro vai ter de fornecer essa *password*.
 
 ---
 
