@@ -44,7 +44,7 @@ Pode sair da máquina remota com `exit` ou *\^d (CTRL+d)*.
 6. Vamos usar criptografia de chave pública para autenticar o utilizador, para evitar a necessidade de fornecer uma *password* quando se faz um acesso remoto.
 Gere um par de chaves RSA para o utilizador do PC1 com o comando:  
 `ssh-keygen -t rsa`  
-Deixe o comando gravar as chaves na pasta por omissão (`.ssh`) e não indique uma *password* (que seria usada para proteger o ficheiro com a chave privada).
+Deixe o comando gravar as chaves na pasta por omissão (`.ssh`) e não indique uma *password* (que seria usada para proteger o ficheiro com a chave privada, o que aliás é uma boa prática para evitar que um intruso roube esta chave).
 Veja o conteúdo da pasta e repare que há dois ficheiros: um com a chave privada e outro com a chave pública.
 
 7. As chaves privadas não devem estar visíveis para outros utilizadores, caso contrário o SSH recusa-se a usá-las (e por isso pede a *password*).
