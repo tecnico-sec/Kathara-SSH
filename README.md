@@ -95,7 +95,7 @@ onde *destination* é a pasta de destino.
 
 ## Exercício 3 -- Operações avançadas
 
-Para estes exercícios vamos usar os servidores `sigma.tecnico.ulisboa.pt` (em vez do *Kathará*).
+Para estes exercícios vamos usar os servidores `sigma.tecnico.ulisboa.pt`, em vez do *Kathará* que não fornece uma GUI às suas máquinas virtuais.
 Deverá executar os comandos num terminal no seu PC.
 Cada exercício é um exercício separado.
 
