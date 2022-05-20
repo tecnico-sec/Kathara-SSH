@@ -54,12 +54,12 @@ Confirme as permissões da pasta `.ssh` e do ficheiro `id_rsa` e repare que as p
 
 8. Copie as chaves públicas (nunca as privadas!) de um computador para o outro.
 Poderia fazer essa cópia copiando os ficheiros entre as máquinas usando o *secure copy* (ver exercício 2.2).
-Como ainda não vimos esse comando, uma alternativa prática é fazer *copy-paste* do conteúdo do ficheiro entre as duas janelas. Outra é usar a pasta `/shared` do Kathará (que existe e é partilhada por todas as máquinas virtuais).
+Como ainda não vimos esse comando, uma alternativa prática é fazer *copy-paste* do conteúdo do ficheiro entre as duas janelas. Outra alternativa é usar a pasta `/shared` do Kathará (que existe em todas as máquinas virtuais e é partilhada por elas).
 
 9. No PC2 crie a pasta `.ssh`, com as permissões `700`.
 Pode alterar as permissões dando o comando:  
 `chmod 700 /<caminho para ficheiro ou pasta>`  
-Na pasta `.ssh` do utilizador para cuja conta quer fazer SSH sem ter de fornecer a *password*, crie um ficheiro chamado `authorized_keys` com a chave pública do utilizador remoto. Podia lá colocar mais chaves de outros utilizadores, uma por linha, se fosse o caso.
+Na pasta `.ssh` do utilizador para cuja conta quer fazer SSH sem ter de fornecer a *password*, crie um ficheiro chamado `authorized_keys` com a chave pública do utilizador remoto (aquela que copiou do outro computador no ponto 8). Podia lá colocar mais chaves de outros utilizadores, uma por linha, se fosse o caso.
 O objetivo deste ficheiro consiste em indicar as entidades que estão autorizadas a entrar, ou  seja, indica que o computador deve aceitar comandos SSH de utilizadores que tenham acesso a uma chave privada correspondendo a uma das chaves públicas presentes no ficheiro `authorized_keys`.
 
 10. Aceda da conta que tem a chave privada à outra correndo o comando:  
