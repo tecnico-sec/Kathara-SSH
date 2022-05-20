@@ -54,7 +54,7 @@ Confirme as permissões da pasta `.ssh` e do ficheiro `id_rsa` e repare que as p
 
 8. Copie as chaves públicas (nunca as privadas!) de um computador para o outro.
 Poderia fazer essa cópia copiando os ficheiros entre as máquinas usando o *secure copy* (ver exercício 2.2).
-Como ainda não vimos esse comando, uma alternativa prática é fazer *copy-paste* do conteúdo do ficheiro entre as duas janelas.
+Como ainda não vimos esse comando, uma alternativa prática é fazer *copy-paste* do conteúdo do ficheiro entre as duas janelas. Outra é usar a pasta `/shared` do Kathará (que existe e é partilhada por todas as máquinas virtuais).
 
 9. No PC2 crie a pasta `.ssh`, com as permissões `700`.
 Pode alterar as permissões dando o comando:  
