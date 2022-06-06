@@ -48,7 +48,7 @@ Deixe o comando gravar as chaves na pasta por omissão (`.ssh`) e não indique u
 Veja o conteúdo da pasta e repare que há dois ficheiros: um com a chave privada e outro com a chave pública.
 
 7. As chaves privadas não devem estar visíveis para outros utilizadores, caso contrário o SSH recusa-se a usá-las (e por isso pede a *password*).
-Confirme as permissões da pasta `.ssh` e do ficheiro `id_rsa` e repare que as permissões são  
+Confirme as permissões da pasta `.ssh` e do ficheiro `id_rsa` e assegure-se que as permissões são  
 `rwx --- ---` (permissão de leitura, escrita e execução para o utilizador e nenhuma para o grupo e todos os utilizadores) ou  
 `rw- --- ---` (só leitura e escrita).
 
