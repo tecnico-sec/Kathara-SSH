@@ -59,7 +59,9 @@ Como ainda não vimos esse comando, uma alternativa prática é fazer *copy-past
 9. No PC2 crie a pasta `.ssh`, com as permissões `700`.
 Pode alterar as permissões dando o comando:  
 `chmod 700 /<caminho para ficheiro ou pasta>`  
-Na pasta `.ssh` do utilizador para cuja conta quer fazer SSH sem ter de fornecer a *password*, crie um ficheiro chamado `authorized_keys` com a chave pública do utilizador remoto (aquela que copiou do outro computador no ponto 8). Podia lá colocar mais chaves de outros utilizadores, uma por linha, se fosse o caso.
+Na pasta `.ssh` do utilizador para cuja conta quer fazer SSH sem ter de fornecer a *password*, crie um ficheiro chamado `authorized_keys` com a chave pública do utilizador remoto (aquela que copiou do outro computador no ponto 8). O formato desse ficheiro será:
+`ssh-rsa ...chave pública... user1@pc1`
+Podia lá colocar mais chaves de outros utilizadores, uma por linha, se fosse o caso.
 O objetivo deste ficheiro consiste em indicar as entidades que estão autorizadas a entrar, ou  seja, indica que o computador deve aceitar comandos SSH de utilizadores que tenham acesso a uma chave privada correspondendo a uma das chaves públicas presentes no ficheiro `authorized_keys`.
 
 10. Aceda da conta que tem a chave privada à outra correndo o comando:  
