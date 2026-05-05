@@ -104,7 +104,7 @@ Deverá executar os comandos num terminal no seu PC.
 Cada exercício é um exercício separado.
 
 1. O SSH permite a execução remota de aplicações gráficas.
-Para tal basta usar a flag `-X`.
+Para tal basta usar a flag `-X` (NB: em alguns casos em vez da `-X` é preciso usar `-Y`).
 Execute o seguinte comando para se ligar a uma das máquinas sigma:  
 `ssh -X istxxx@sigma.tecnico.ulisboa.pt`  
 Após introduzir a sua *password*, fica ligado à máquina sigma, onde pode correr aplicações. 
